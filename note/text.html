@@ -1,0 +1,83 @@
+<h1>[[[HTML===============================================</h1>
+<p>
+    <br/> self closing tag
+    br = bracket
+    Block: div, h, p //new line each
+    Inline: button, a, span, <b>Bold //same line
+    div: group elem together
+    ul: un-ordered list
+    ol: ordered list
+    position: static, relative, absolute
+        static: default: normal flow
+        relative: allow to set position among elements
+        absolute: 
+            fix position of each elements BASE ON closest relative element
+            overlap to other elements if needed
+            use by indicate postion of top, bottom,left,right
+        fixed: fix @ permanent position, use by indicate position of top, bottom,left,right (i.e. chatbox, email icon)
+        sticky: fixed box
+</p>
+<h1>[[[CSS===============================================</h1>
+<p>
+    common properties
+        color, background-color
+        width, height, border
+        font-size, font-family, font-weight
+    set responsive by: 
+        width:70%; //70% width of screen 
+        height: 100vh; //100% of view height
+        width: 100vw; //100% of view width
+    tag reference
+    <div>           --> div {}
+        <div class="t"> --> .t {}
+            <div id="x">    --> #x {}
+    box model
+    content, padding, border, margin 
+        box-sizing: 
+            content-box: content will spread out the whole box since area=text only (have to indicate w x h of each box)
+            border-box: self-align text for a smaller text area since area=margin+pad+text (recommend)
+            media queries: for responsive showing on different devices
+        @media (max-width: 576px) { } //phone
+        @media (max-width: 768px) { } //tablet
+        @media (max-width: 992px) { } //desktop
+        @media (max-width: 1200px) { } //large-screen
+    extra things
+        pseudo selector: after and before
+            HTML                CSS
+            <div>Hello </div>     --> div::after { content: " World"}
+        transition: //changing color to black when hovering to div
+            div {transition: background-color 300ms;}
+            div:hover {background-color red;}
+        Animators
+            @keyframes float{ //create animation name float
+                0% {transform: translateY(0);}//define init position
+                100% {transform: translateY(10px);}//define end position
+            }
+            div {animation: float 200ms infinite alternate-reverse}
+            //this make the floating animation in div INFINITE and SMOOTH
+        BEM (block-element-modifier)//naming convetion for readability
+            block: component itself
+            element: dependent on the block
+            modifier: to change the style of the block
+            B.
+            <nav>                E.                    M.                          
+                <a href="home" class="nav__link" nav__link--active>Home</a> 
+            </nav>
+            THEN inside CSS, just define those elements
+            .nav__link { font-size: 15px;}
+            .nav__link--active {
+                font-weight: bold;
+            }
+    
+</p>
+<h1>CSS: Flexbox Layout</h1>
+<p>
+    display: flex;
+    justify-content: //horizontally
+        flex-start; //default - left align
+        flex-center; //middle align
+        flex-end; //right align
+        space-around; //middle align and self-justify equally among items
+    align-item:
+        center; // vertically
+</p>

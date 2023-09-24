@@ -1,0 +1,48 @@
+.box {
+    width:70%;
+    border: 3px blue solid;
+    margin-top: 50px;
+    padding-top: 20px;
+}
+h1 {
+    color: rgb(61, 65, 122);
+    font-size: 30px;
+    border: 2px skyblue dotted;
+}
+h2 {
+    color: rgba(rgb(51, 51, 141), alpha=0.2);
+    font-size: 17px;
+    font-style: bold;
+    font-family: 'Roboto', sans-serif;
+}
+.my1 {
+    color:red;
+}
+.my2 {
+    color:gray;
+}
+#myti {
+    color:brown;
+}
+#home {
+    height: 80vh;
+    border: dotted red;
+}
+
+#info {
+    height: 80vh;
+    border: solid black;
+}
+
+#footer {
+    height: 80vh;
+    border: dotted blue;   
+}
+
+button {
+    animation: floating 4s infinite alternate-reverse;
+}
+@keyframes floating{ /*create animation name float*/
+    0% {transform: translateY(0);}/*define init position*/
+    100% {transform: translateY(10px);}/*define end position*/
+}
